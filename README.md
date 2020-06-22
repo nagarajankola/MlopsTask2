@@ -9,8 +9,8 @@ This is a simple website monitoring system with the intergration of CI/CD tools.
  * install jenkins in linux.Information regarding install [click here](https://www.jenkins.io/download/)
  * install git in linux.To install [click here](https://git-scm.com/download/linux)
  
- Create a Dockerfile that has Jenkins installed.
-(this docker image is configured in such a way that as soon as the image is launched the Jenkins will start automatically)
+#### Create a Dockerfile that has Jenkins installed.
+#### (this docker image is configured in such a way that as soon as the image is launched the Jenkins will start automatically)
 
     FROM centos
     RUN dnf install wget -y
@@ -26,7 +26,7 @@ This is a simple website monitoring system with the intergration of CI/CD tools.
     RUN echo "/etc/rc.d/init.d/jenkins start" > /root/.bashrc
     EXPOSE 808
   
-Build the image using the following command
+#### Build the image using the following command
 
     docker build -t myjenkins:v1
     
